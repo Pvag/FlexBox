@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .flex-container {
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+
+            /* try one of the following to align elements in the row */
+            /*  */
+            /*  justify-content: center; */
+            justify-content: space-between;
+            /*  justify-content: space-around; */
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+
+            /* try one of the following to align rows in the flex container */
+            /*  */
+            /*  align-content: center; */
+            /*  align-content: flex-start; */
+            /*  align-content: flex-end; */
+            /* align-content: space-between; */
+            align-content: space-around;
+
+            /* try one of the 2 following wraps (note that other types of wrap exist) */
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+
+            background-color: lightgreen;
+        }
+
+        /* all divs that are first child to an element with class .flex-container */
+        .flex-container > div {
+            background-color: lightskyblue;
+            margin: 10px;
+            padding: 20px;
+            width: 70px;
+            height: 40px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        h1 {
+            width: 40%;
+            text-align: center;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>A nice FlexBox to play with!</h1>
+
+    <!-- remember: flexbox items must be placed inside a flex container, a container for which 'display: flex;' was set -->
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <p>Try to resize the window, to see the effect of the values set for the flex, wrap,
+        justify and align properties in action.</p>
+</body>
+</html>
